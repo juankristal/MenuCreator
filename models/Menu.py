@@ -31,6 +31,6 @@ class MenuIterator:
         if not self.stack:
             raise StopIteration("Finished Iteration")
         current_element = self.stack.pop()
-        for category in current_element.children:
-            self.stack.append(category)
+        for child in current_element:
+            self.stack.append(child)
         return current_element

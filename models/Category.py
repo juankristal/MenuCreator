@@ -23,10 +23,6 @@ class Category:
         self.attributes.append(attribute)
         map(lambda category: category.add_attribute(attribute), self.children)
 
+    def __iter__(self):
+        return list.__iter__(self.children)
 
-class CategoryIterator:
-    def __init__(self, category: Category):
-        self.iter = list.__iter__(category.children)
-
-    def __next__(self):
-        return self.iter.__next__()
