@@ -1,0 +1,2 @@
+class TooManyParametersException(Exception):
+    pass
